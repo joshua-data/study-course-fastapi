@@ -5,10 +5,13 @@ class Enemy:
     attack_damage: int = 1
 
     def talk(self):
-        print(f"I am a {self.type_of_enemy}. Be prepared to fight!")
+        msg = f"I am a {self.type_of_enemy}. Be prepared to fight!"
+        print(msg)
 
     def walk_forward(self):
-        print(f"{self.type_of_enemy} moves closer to you")
+        msg = f"{self.type_of_enemy} moves closer to you"
+        print(msg)
 
     def attack(self):
-        print(f"{self.type_of_enemy} attacks for {self.attack_damage} damage")  
+        msg = f"{self.type_of_enemy} attacks for {self.attack_damage} damage"
+        print(msg)
