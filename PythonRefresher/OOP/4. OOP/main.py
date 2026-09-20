@@ -1,6 +1,6 @@
+from Enemy import *
 from Zombie import *
 from Ogre import *
-from Enemy import *
 
 def battle(e: Enemy):
     e.talk()
@@ -11,5 +11,3 @@ ogre = Ogre(20, 3)
 
 battle(zombie)
 battle(ogre)
-
-
