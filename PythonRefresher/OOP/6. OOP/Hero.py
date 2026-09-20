@@ -1,6 +1,7 @@
 from Weapon import *
 
 class Hero:
+
     def __init__(self, health_points, attack_damage):
         self.health_points = health_points
         self.attack_damage = attack_damage
@@ -14,4 +15,4 @@ class Hero:
             self.is_weapon_equipped = True
 
     def attack(self):
-        print(f"Hero attacks for {self.attack_damage} damage")
+        print(f"Hero attacks for {self.attack_damage} damage.")
