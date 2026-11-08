@@ -64,7 +64,7 @@ async def update_book(book_request: BookRequest):
     is_id_found = False
     for i in range(len(BOOKS)):
         if BOOKS[i].id == book_request.id:
-            BOOKS[i] == book_request
+            BOOKS[i] = book_request
             is_id_found = True
     if not is_id_found:
         raise HTTPException(status_code=404, detail="Item not found.")

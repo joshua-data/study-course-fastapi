@@ -45,6 +45,7 @@ async def read_books_by_author_path_category_query(author: str, category: str):
                 books_to_return.append(book)
     return books_to_return
 
+
 # =============================================================================
 # [POST] Create Data
 # =============================================================================
@@ -52,6 +53,7 @@ async def read_books_by_author_path_category_query(author: str, category: str):
 @app.post("/books/create_book")
 async def create_book(new_book=Body()):
     BOOKS.append(new_book)
+
 
 # =============================================================================
 # [PUT] Update Data
@@ -63,9 +65,11 @@ async def update_book(updated_book=Body()):
         if BOOKS[i].get("title").casefold() == updated_book.get("title").casefold():
             BOOKS[i] = updated_book
 
+
 # =============================================================================
 # [DELETE] Delete Data
 # =============================================================================
+
 @app.delete("/books/delete_book/{title}")
 async def delete_book(title: str):
     for i in range(len(BOOKS)):
